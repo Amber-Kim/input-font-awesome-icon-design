@@ -1,0 +1,69 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #222;
+    line-height: 1.5em;
+    font-weight: 300;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+.item {
+    width: 300px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.item input {
+    border: 1px solid lightgray;
+    height: 40px;
+    width: inherit;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    padding-left: 40px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.item .fa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: gray;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    /* 중간에 놓기 위함 == 높이 값이랑 같아야 함*/
+}
+
+/* input이 클릭이 된다면, 자신 요소가 스스로 코드대로 바뀜*/
+.item input:focus {
+    border: 1px solid dodgerblue;
+    box-shadow: 0 0 5px dodgerblue;
+}
+
+/* 자기 자신 아래에 인접해있는 요소를 바꿀게 '+' fa의 색깔이 변한거임 */
+.item input:focus+.fa {
+    color: dodgerblue;
+}
+
+/* input을 누르면 focus 내 자신을 변화시킬건데, 그 중 placeholder를 바꿀거야 */
+.item input:focus::placeholder {
+    visibility: hidden;
+}
